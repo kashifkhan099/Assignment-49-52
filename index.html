@@ -3,64 +3,154 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Signup Form</title>
+  <title>Item Details</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 20px;
     }
-    form {
+    .item {
       max-width: 400px;
-      margin: 0 auto;
+      margin: 1 auto;
+      border: 2px solid #ccc;
+      padding: 15px;
+      margin-bottom: 25px;
     }
-    input, button {
-      margin-bottom: 10px;
-      display: block;
-      width: 100%;
-      padding: 8px;
-      box-sizing: border-box;
+    .details {
+      display: none;
+    }
+    .readMoreBtn {
+      cursor: pointer;
+      color: blue;
     }
   </style>
 </head>
 <body>
 
-  <form id="signupForm">
-    <label for="firstName">First Name:</label>
-    <input type="text" id="firstName" name="firstName" required>
+  <div class="item">
+    <h2>IPhone 14 Pro Max</h2>
+    <p>Apple iPhone 14 Pro Max smartphone. Announced Sep 2022. Features 6.7″ display, Apple A16 Bionic chipset, 4323 mAh battery, 1024 GB storage, 6 GB RAM, ...
+        US$798.00</p>
+    <p class="details">Network 	Technology 	
+        GSM / CDMA / HSPA / EVDO / LTE / 5G
+        Launch 	Announced 	2022, September 07
+        Status 	Available. Released 2022, September 16
+        Body 	Dimensions 	160.7 x 77.6 x 7.9 mm (6.33 x 3.06 x 0.31 in)
+        Weight 	240 g (8.47 oz)
+        Build 	Glass front (Corning-made glass), glass back (Corning-made glass), stainless steel frame
+        SIM 	Nano-SIM and eSIM - International
+        Dual eSIM with multiple numbers - USA
+        Dual SIM (Nano-SIM, dual stand-by) - China
+             IP68 dust/water resistant (up to 6m for 30 min)
+        Apple Pay (Visa, MasterCard, AMEX certified)
+        Display 	Type 	LTPO Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, 1000 nits (typ), 2000 nits (HBM)
+        Size 	6.7 inches, 110.2 cm2 (~88.3% screen-to-body ratio)
+        Resolution 	1290 x 2796 pixels, 19.5:9 ratio (~460 ppi density)
+        Protection 	Ceramic Shield glass
+             Always-On display
+        Platform 	OS 	iOS 16, upgradable to iOS 17.1.1
+        Chipset 	Apple A16 Bionic (4 nm)
+        CPU 	Hexa-core (2x3.46 GHz Everest + 4x2.02 GHz Sawtooth)
+        GPU 	Apple GPU (5-core graphics)
+        Memory 	Card slot 	No
+        Internal 	128GB 6GB RAM, 256GB 6GB RAM, 512GB 6GB RAM, 1TB 6GB RAM
+             NVMe
+        Main Camera 	Triple 	48 MP, f/1.8, 24mm (wide), 1/1.28", 1.22µm, dual pixel PDAF, sensor-shift OIS
+        12 MP, f/2.8, 77mm (telephoto), 1/3.5", 1.0µm, PDAF, OIS, 3x optical zoom
+        12 MP, f/2.2, 13mm, 120˚ (ultrawide), 1/2.55", 1.4µm, dual pixel PDAF
+        TOF 3D LiDAR scanner (depth)
+        Features 	Dual-LED dual-tone flash, HDR (photo/panorama)
+        Video 	4K@24/25/30/60fps, 1080p@25/30/60/120/240fps, 10-bit HDR, Dolby Vision HDR (up to 60fps), ProRes, Cinematic mode (4K@24/30fps), stereo sound rec.
+        Selfie camera 	Single 	12 MP, f/1.9, 23mm (wide), 1/3.6", PDAF, OIS
+        SL 3D, (depth/biometrics sensor)
+        Features 	HDR, Cinematic mode (4K@24/30fps)
+        Video 	4K@24/25/30/60fps, 1080p@25/30/60/120fps, gyro-EIS
+        Sound 	Loudspeaker 	Yes, with stereo speakers
+        3.5mm jack 	No
+        Comms 	WLAN 	Wi-Fi 802.11 a/b/g/n/ac/6, dual-band, hotspot
+        Bluetooth 	5.3, A2DP, LE
+        Positioning 	GPS (L1+L5), GLONASS, GALILEO, BDS, QZSS
+        NFC 	Yes
+        Radio 	No
+        USB 	Lightning, USB 2.0
+        Features 	Sensors 	Face ID, accelerometer, gyro, proximity, compass, barometer
+             Ultra Wideband (UWB) support
+        Emergency SOS via satellite (SMS sending/receiving)
+        Battery 	Type 	Li-Ion 4323 mAh, non-removable (16.68 Wh)
+        Charging 	Wired, PD2.0, 50% in 30 min (advertised)
+        15W wireless (MagSafe)
+        7.5W wireless (Qi)
+        Misc 	Colors 	Space Black, Silver, Gold, Deep Purple
+        Models 	A2894, A2651, A2893, A2895, iphone15,3
+        SAR 	1.15 W/kg (head)     1.07 W/kg (body)    
+        SAR EU 	0.99 W/kg (head)     0.98 W/kg (body)    
+        Price 	$ 798.00 / € 1,062.83 / £ 749.99 / ₹ 189,900
+        Tests 	Performance 	AnTuTu: 955884 (v9)
+        GeekBench: 5423 (v5.1)
+        GFXBench: 54fps (ES 3.1 onscreen)
+        Display 	Contrast ratio: Infinite (nominal)
+        Camera 	Photo / Video
+        Loudspeaker 	-24.3 LUFS (Very good)
+        Battery (old) 	
+        Endurance rating 121h</p>
+    <p class="readMoreBtn" onclick="toggleDetails(this)">Read more</p>
+  </div>
 
-    <label for="lastName">Last Name:</label>
-    <input type="text" id="lastName" name="lastName" required>
+  <div class="item">
+    <h2>IPhone 15 Pro Max</h2>
+    <p>iPhone 15 Pro Technical Specifications · 12MP camera · ƒ/1.9 aperture · Autofocus with Focus Pixels · Retina Flash · Photonic Engine · Deep Fusion · Smart HDR.</p>
+    <p class="details"> iPhone 15 Pro Max
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-
-    <button type="button" onclick="submitForm()">Submit</button>
-  </form>
-
-  <div id="formData" style="display: none;">
-    <h2>Form Data</h2>
-    <p id="displayFirstName"></p>
-    <p id="displayLastName"></p>
-    <p id="displayEmail"></p>
+        Pro camera system
+        48MP Main: 24 mm, ƒ/1.78 aperture, second‑generation sensor‑shift optical image stabilization, 100% Focus Pixels, support for super‑high‑resolution photos (24MP and 48MP)
+        12MP Ultra Wide: 13 mm, ƒ/2.2 aperture and 120° field of view, 100% Focus Pixels
+        12MP 2x Telephoto (enabled by quad‑pixel sensor): 48 mm, ƒ/1.78 aperture, second‑generation sensor‑shift optical image stabilization, 100% Focus Pixels
+        12MP 5x Telephoto: 120 mm, ƒ/2.8 aperture, 3D sensor‑shift optical image stabilization and autofocus, tetraprism design
+        5x optical zoom in, 2x optical zoom out; 10x optical zoom range
+        Digital zoom up to 25x
+    
+    Both models
+    
+        Customizable default lens (Main)
+        Sapphire crystal lens cover
+        Adaptive True Tone flash
+        Photonic Engine
+        Deep Fusion
+        Smart HDR 5
+        Next-generation portraits with Focus and Depth Control
+        Portrait Lighting with six effects
+        Night mode
+        Night mode portraits enabled by LiDAR Scanner
+        Panorama (up to 63MP)
+        Photographic Styles
+        Macro photography
+        Apple ProRAW
+        Wide color capture for photos and Live Photos
+        Lens correction (Ultra Wide)
+        Advanced red-eye correction
+        Auto image stabilization
+        Burst mode
+        Photo geotagging
+        Image formats captured: HEIF, JPEG, and DNG.    
+    </p>
+    <p class="readMoreBtn" onclick="toggleDetails(this)">Read more</p>
   </div>
 
   <script>
-    function submitForm() {
-      // Get form data
-      var firstName = document.getElementById('firstName').value;
-      var lastName = document.getElementById('lastName').value;
-      var email = document.getElementById('email').value;
+    function toggleDetails(button) {
+      var item = button.parentElement;
+      var details = item.querySelector('.details');
 
-      // Display form data
-      document.getElementById('displayFirstName').innerText = 'First Name: ' + firstName;
-      document.getElementById('displayLastName').innerText = 'Last Name: ' + lastName;
-      document.getElementById('displayEmail').innerText = 'Email: ' + email;
-
-      // Show the form data section
-      document.getElementById('formData').style.display = 'block';
+      // Toggle the display of full details
+      if (details.style.display === 'none' || details.style.display === '') {
+        details.style.display = 'block';
+        button.innerText = 'Read less';
+      } else {
+        details.style.display = 'none';
+        button.innerText = 'Read more';
+      }
     }
   </script>
 
 </body>
 </html>
-
