@@ -3,152 +3,162 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Item Details</title>
+  <title>Student Details</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 20px;
     }
-    .item {
-      max-width: 400px;
-      margin: 1 auto;
-      border: 2px solid #ccc;
-      padding: 15px;
-      margin-bottom: 25px;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
     }
-    .details {
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    .editForm {
       display: none;
     }
-    .readMoreBtn {
-      cursor: pointer;
-      color: blue;
+    .editForm label, .editForm input {
+      display: block;
+      margin-bottom: 10px;
+    }
+    .editForm button {
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
 
-  <div class="item">
-    <h2>IPhone 14 Pro Max</h2>
-    <p>Apple iPhone 14 Pro Max smartphone. Announced Sep 2022. Features 6.7″ display, Apple A16 Bionic chipset, 4323 mAh battery, 1024 GB storage, 6 GB RAM, ...
-        US$798.00</p>
-    <p class="details">Network 	Technology 	
-        GSM / CDMA / HSPA / EVDO / LTE / 5G
-        Launch 	Announced 	2022, September 07
-        Status 	Available. Released 2022, September 16
-        Body 	Dimensions 	160.7 x 77.6 x 7.9 mm (6.33 x 3.06 x 0.31 in)
-        Weight 	240 g (8.47 oz)
-        Build 	Glass front (Corning-made glass), glass back (Corning-made glass), stainless steel frame
-        SIM 	Nano-SIM and eSIM - International
-        Dual eSIM with multiple numbers - USA
-        Dual SIM (Nano-SIM, dual stand-by) - China
-             IP68 dust/water resistant (up to 6m for 30 min)
-        Apple Pay (Visa, MasterCard, AMEX certified)
-        Display 	Type 	LTPO Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, 1000 nits (typ), 2000 nits (HBM)
-        Size 	6.7 inches, 110.2 cm2 (~88.3% screen-to-body ratio)
-        Resolution 	1290 x 2796 pixels, 19.5:9 ratio (~460 ppi density)
-        Protection 	Ceramic Shield glass
-             Always-On display
-        Platform 	OS 	iOS 16, upgradable to iOS 17.1.1
-        Chipset 	Apple A16 Bionic (4 nm)
-        CPU 	Hexa-core (2x3.46 GHz Everest + 4x2.02 GHz Sawtooth)
-        GPU 	Apple GPU (5-core graphics)
-        Memory 	Card slot 	No
-        Internal 	128GB 6GB RAM, 256GB 6GB RAM, 512GB 6GB RAM, 1TB 6GB RAM
-             NVMe
-        Main Camera 	Triple 	48 MP, f/1.8, 24mm (wide), 1/1.28", 1.22µm, dual pixel PDAF, sensor-shift OIS
-        12 MP, f/2.8, 77mm (telephoto), 1/3.5", 1.0µm, PDAF, OIS, 3x optical zoom
-        12 MP, f/2.2, 13mm, 120˚ (ultrawide), 1/2.55", 1.4µm, dual pixel PDAF
-        TOF 3D LiDAR scanner (depth)
-        Features 	Dual-LED dual-tone flash, HDR (photo/panorama)
-        Video 	4K@24/25/30/60fps, 1080p@25/30/60/120/240fps, 10-bit HDR, Dolby Vision HDR (up to 60fps), ProRes, Cinematic mode (4K@24/30fps), stereo sound rec.
-        Selfie camera 	Single 	12 MP, f/1.9, 23mm (wide), 1/3.6", PDAF, OIS
-        SL 3D, (depth/biometrics sensor)
-        Features 	HDR, Cinematic mode (4K@24/30fps)
-        Video 	4K@24/25/30/60fps, 1080p@25/30/60/120fps, gyro-EIS
-        Sound 	Loudspeaker 	Yes, with stereo speakers
-        3.5mm jack 	No
-        Comms 	WLAN 	Wi-Fi 802.11 a/b/g/n/ac/6, dual-band, hotspot
-        Bluetooth 	5.3, A2DP, LE
-        Positioning 	GPS (L1+L5), GLONASS, GALILEO, BDS, QZSS
-        NFC 	Yes
-        Radio 	No
-        USB 	Lightning, USB 2.0
-        Features 	Sensors 	Face ID, accelerometer, gyro, proximity, compass, barometer
-             Ultra Wideband (UWB) support
-        Emergency SOS via satellite (SMS sending/receiving)
-        Battery 	Type 	Li-Ion 4323 mAh, non-removable (16.68 Wh)
-        Charging 	Wired, PD2.0, 50% in 30 min (advertised)
-        15W wireless (MagSafe)
-        7.5W wireless (Qi)
-        Misc 	Colors 	Space Black, Silver, Gold, Deep Purple
-        Models 	A2894, A2651, A2893, A2895, iphone15,3
-        SAR 	1.15 W/kg (head)     1.07 W/kg (body)    
-        SAR EU 	0.99 W/kg (head)     0.98 W/kg (body)    
-        Price 	$ 798.00 / € 1,062.83 / £ 749.99 / ₹ 189,900
-        Tests 	Performance 	AnTuTu: 955884 (v9)
-        GeekBench: 5423 (v5.1)
-        GFXBench: 54fps (ES 3.1 onscreen)
-        Display 	Contrast ratio: Infinite (nominal)
-        Camera 	Photo / Video
-        Loudspeaker 	-24.3 LUFS (Very good)
-        Battery (old) 	
-        Endurance rating 121h</p>
-    <p class="readMoreBtn" onclick="toggleDetails(this)">Read more</p>
-  </div>
+  <form id="studentForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
 
-  <div class="item">
-    <h2>IPhone 15 Pro Max</h2>
-    <p>iPhone 15 Pro Technical Specifications · 12MP camera · ƒ/1.9 aperture · Autofocus with Focus Pixels · Retina Flash · Photonic Engine · Deep Fusion · Smart HDR.</p>
-    <p class="details"> iPhone 15 Pro Max
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required>
 
-        Pro camera system
-        48MP Main: 24 mm, ƒ/1.78 aperture, second‑generation sensor‑shift optical image stabilization, 100% Focus Pixels, support for super‑high‑resolution photos (24MP and 48MP)
-        12MP Ultra Wide: 13 mm, ƒ/2.2 aperture and 120° field of view, 100% Focus Pixels
-        12MP 2x Telephoto (enabled by quad‑pixel sensor): 48 mm, ƒ/1.78 aperture, second‑generation sensor‑shift optical image stabilization, 100% Focus Pixels
-        12MP 5x Telephoto: 120 mm, ƒ/2.8 aperture, 3D sensor‑shift optical image stabilization and autofocus, tetraprism design
-        5x optical zoom in, 2x optical zoom out; 10x optical zoom range
-        Digital zoom up to 25x
-    
-    Both models
-    
-        Customizable default lens (Main)
-        Sapphire crystal lens cover
-        Adaptive True Tone flash
-        Photonic Engine
-        Deep Fusion
-        Smart HDR 5
-        Next-generation portraits with Focus and Depth Control
-        Portrait Lighting with six effects
-        Night mode
-        Night mode portraits enabled by LiDAR Scanner
-        Panorama (up to 63MP)
-        Photographic Styles
-        Macro photography
-        Apple ProRAW
-        Wide color capture for photos and Live Photos
-        Lens correction (Ultra Wide)
-        Advanced red-eye correction
-        Auto image stabilization
-        Burst mode
-        Photo geotagging
-        Image formats captured: HEIF, JPEG, and DNG.    
-    </p>
-    <p class="readMoreBtn" onclick="toggleDetails(this)">Read more</p>
+    <label for="class">Class:</label>
+    <input type="text" id="class" name="class" required>
+
+    <button type="button" onclick="addStudent()">Add Student</button>
+  </form>
+
+  <table id="studentTable">
+    <thead>
+      <tr>
+        <th>Sr. No.</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Class</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Student details will be added here dynamically -->
+      <tr>
+        <td>1</td>
+        <td>Ammar</td>
+        <td>18</td>
+        <td>12</td>
+        <td><button onclick="deleteRow(this)">Delete</button> <button onclick="editRow(this)">Edit</button></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Ahmed</td>
+        <td>17</td>
+        <td>11</td>
+        <td><button onclick="deleteRow(this)">Delete</button> <button onclick="editRow(this)">Edit</button></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Waqas</td>
+        <td>20</td>
+        <td>09</td>
+        <td><button onclick="deleteRow(this)">Delete</button> <button onclick="editRow(this)">Edit</button></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Umair</td>
+        <td>22</td>
+        <td>13</td>
+        <td><button onclick="deleteRow(this)">Delete</button> <button onclick="editRow(this)">Edit</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div id="editForm" class="editForm">
+    <h2>Edit Student</h2>
+    <label for="editName">Name:</label>
+    <input type="text" id="editName" name="editName" required>
+
+    <label for="editAge">Age:</label>
+    <input type="number" id="editAge" name="editAge" required>
+
+    <label for="editClass">Class:</label>
+    <input type="text" id="editClass" name="editClass" required>
+
+    <button type="button" onclick="saveEdit()">Save</button>
   </div>
 
   <script>
-    function toggleDetails(button) {
-      var item = button.parentElement;
-      var details = item.querySelector('.details');
+    function addStudent() {
+      // Get form data
+      var name = document.getElementById('name').value;
+      var age = document.getElementById('age').value;
+      var studentClass = document.getElementById('class').value;
 
-      // Toggle the display of full details
-      if (details.style.display === 'none' || details.style.display === '') {
-        details.style.display = 'block';
-        button.innerText = 'Read less';
-      } else {
-        details.style.display = 'none';
-        button.innerText = 'Read more';
-      }
+      // Create a new row in the table
+      var table = document.getElementById('studentTable').getElementsByTagName('tbody')[0];
+      var newRow = table.insertRow(table.rows.length);
+      var cell1 = newRow.insertCell(0);
+      var cell2 = newRow.insertCell(1);
+      var cell3 = newRow.insertCell(2);
+      var cell4 = newRow.insertCell(3);
+      var cell5 = newRow.insertCell(4);
+
+      cell1.innerHTML = table.rows.length;
+      cell2.innerHTML = name;
+      cell3.innerHTML = age;
+      cell4.innerHTML = studentClass;
+      cell5.innerHTML = '<button onclick="deleteRow(this)">Delete</button> <button onclick="editRow(this)">Edit</button>';
+    }
+
+    function deleteRow(button) {
+      // Delete the entire row
+      var row = button.parentNode.parentNode;
+      row.parentNode.removeChild(row);
+    }
+
+    function editRow(button) {
+      // Show the edit form with values from the selected row
+      var row = button.parentNode.parentNode;
+      document.getElementById('editName').value = row.cells[1].innerHTML;
+      document.getElementById('editAge').value = row.cells[2].innerHTML;
+      document.getElementById('editClass').value = row.cells[3].innerHTML;
+
+      // Show the edit form and hide the student form
+      document.getElementById('editForm').style.display = 'block';
+      document.getElementById('studentForm').style.display = 'none';
+    }
+
+    function saveEdit() {
+      // Save the edited values to the selected row
+      var table = document.getElementById('studentTable').getElementsByTagName('tbody')[0];
+      var editForm = document.getElementById('editForm');
+
+      var editedRow = table.rows[table.rows.length - 1]; // Assuming the last row is the one being edited
+      editedRow.cells[1].innerHTML = document.getElementById('editName').value;
+      editedRow.cells[2].innerHTML = document.getElementById('editAge').value;
+      editedRow.cells[3].innerHTML = document.getElementById('editClass').value;
+
+      // Hide the edit form and show the student form
+      editForm.style.display = 'none';
+      document.getElementById('studentForm').style.display = 'block';
     }
   </script>
 
